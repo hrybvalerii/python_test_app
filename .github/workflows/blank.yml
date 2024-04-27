@@ -33,6 +33,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+    # Setting up a database
+      - name: Run database setup script
+        run: python db.py -a
+
      # Runs unit tests     
       - name: Run unit tests
         run: 
